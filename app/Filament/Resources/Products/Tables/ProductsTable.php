@@ -2,11 +2,9 @@
 
 namespace App\Filament\Resources\Products\Tables;
 
-use App\Models\Product;
 use App\Models\ProductCategory;
-use App\Models\Subscription;
+
 use Filament\Actions\BulkActionGroup;
-use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -17,7 +15,6 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,13 +29,13 @@ class ProductsTable
                     ->hidden(fn() => Auth::user()->role === 'store'),
                 TextColumn::make('productCategory.name')
                     ->label('Kategori Menu'),
+                TextColumn::make('name')
+                    ->label('Nama Menu'),
                 ImageColumn::make('image')
                     ->label('Foto Menu'),
                 TextColumn::make('price')
                     ->label('Harga Menu')
-                    ->formatStateUsing(function (string $state) {
-                        return 'Rp ' . number_format($state);
-                    }),
+                    ->formatStateUsing(fn(string $state) => 'Rp ' . number_format($state)),
                 TextColumn::make('rating')
                     ->label('Rating Menu'),
                 ToggleColumn::make('is_popular')
