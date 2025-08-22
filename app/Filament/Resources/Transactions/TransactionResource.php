@@ -18,6 +18,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class TransactionResource extends Resource
 {
@@ -53,12 +54,34 @@ class TransactionResource extends Resource
         ];
     }
 
-    public static function getRecordRouteBindingEloquentQuery(): Builder
+    public static function getEloquentQuery(): Builder
     {
-        return parent::getRecordRouteBindingEloquentQuery()
+        $query = parent::getEloquentQuery()
             ->withoutGlobalScopes([
                 SoftDeletingScope::class,
             ]);
+
+        // Jika user adalah 'store', hanya tampilkan transaksi milik user tersebut
+        if (Auth::check() && Auth::user()->role === 'store') {
+            $query->where('user_id', Auth::id());
+        }
+
+        return $query;
+    }
+
+    public static function getRecordRouteBindingEloquentQuery(): Builder
+    {
+        $query = parent::getRecordRouteBindingEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
+
+        // Pastikan user hanya bisa mengakses transaksi milik mereka sendiri
+        if (Auth::check() && Auth::user()->role === 'store') {
+            $query->where('user_id', Auth::id());
+        }
+
+        return $query;
     }
 
     public static function updateTotals(Get $get, Set $set)

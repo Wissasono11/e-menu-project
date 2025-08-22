@@ -28,6 +28,15 @@ class User extends Authenticatable
     ];
 
     /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'role' => 'store',
+    ];
+
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var list<string>

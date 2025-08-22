@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 
 class Transaction extends Model
 {
     use SoftDeletes;
+    
     protected $fillable = [
         'user_id',
         'code',
@@ -20,12 +22,19 @@ class Transaction extends Model
         'status'
     ];
 
-    public static function boot()
+    /**
+     * The "booted" method of the model.
+     */
+    protected static function booted(): void
     {
-        parent::boot();
+        // Global scope untuk filtering berdasarkan user yang sedang login
+        static::addGlobalScope('userTransactions', function (Builder $builder) {
+            if (Auth::check() && Auth::user()->role === 'store') {
+                $builder->where('user_id', Auth::id());
+            }
+        });
 
         static::creating(function ($model) {
-
             if (Auth::user()->role === 'store') {
                 $model->user_id = Auth::user()->id;
             }
