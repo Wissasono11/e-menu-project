@@ -47,7 +47,9 @@ class ListProducts extends ListRecords
         $actions = [];
 
         if ($this->canCreateProduct()) {
-            $actions[] = CreateAction::make();
+            $actions[] = CreateAction::make()
+                ->label('New Product')
+                ->icon('heroicon-o-plus');
         } else {
             $countProduct = Product::where('user_id', Auth::user()->id)->count();
 
