@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use illuminate\Support\Str;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 
 class ProductCategory extends Model
