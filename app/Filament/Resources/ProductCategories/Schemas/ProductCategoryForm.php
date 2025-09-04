@@ -5,7 +5,7 @@ namespace App\Filament\Resources\ProductCategories\Schemas;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\select;
+use Filament\Forms\Components\Select;
 use Illuminate\Support\Facades\Auth;
 
 class ProductCategoryForm
@@ -24,6 +24,12 @@ class ProductCategoryForm
                     ->required(),
                 FileUpload::make('icon')
                     ->label('Ikon Kategori')
+                    ->disk('public')
+                    ->directory('categories')
+                    ->image()
+                    ->imageResizeMode('contain')
+                    ->imageResizeTargetWidth('64')
+                    ->imageResizeTargetHeight('64')
                     ->required(),
             ]);
     }

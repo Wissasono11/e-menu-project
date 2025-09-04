@@ -27,7 +27,10 @@ class ProductCategoriesTable
                 TextColumn::make('name')
                     ->label('Nama Kategori'),
                 ImageColumn::make('icon')
-                    ->label('Ikon Kategori'),
+                    ->label('Ikon Kategori')
+                    ->disk('public')
+                    ->height(40)
+                    ->width(40),
             ])
             ->filters([
                 SelectFilter::make('user')

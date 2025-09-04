@@ -38,18 +38,26 @@
 
         <div class="swiper w-full">
             <div class="swiper-wrapper mt-[20px]">
+                @foreach ($store->productCategories as $category)
                 <a href="#" class="swiper-slide !w-fit">
                     <div class="flex flex-col items-center shrink-0 gap-2 text-center">
                         <div
                             class="w-[64px] h-[64px] rounded-full flex shrink-0 overflow-hidden p-4 bg-[#9393931A] bg-opacity-10">
-                            <img src="assets/images/icons/all-menu.png" class="w-full h-full object-contain"
-                                alt="thumbnail">
-                        </div>
+                            @if($category->icon && file_exists(storage_path('app/public/' . $category->icon)))
+                                <img src="{{asset('storage/' . $category->icon)}}" class="w-full h-full object-contain"
+                                    alt="Category icon for {{ $category->name }}">
+                            @else
+                                <img src="{{asset('assets/images/icons/all-menu.png')}}" class="w-full h-full object-contain"
+                                    alt="Default category icon for {{ $category->name }}">
+                            @endif
+                            </div>
                         <div class="flex flex-col gap-[2px]">
-                            <h3 class="font-light text-[#504D53] text-[14px]">All Menu</h3>
+                            <h3 class="font-light text-[#504D53] text-[14px]">{{ $category->name }}</h3>
                         </div>
                     </div>
                 </a>
+                @endforeach
+                
             </div>
         </div>
     </div>
