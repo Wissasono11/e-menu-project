@@ -29,8 +29,6 @@ class ProductCategoriesTable
                 ImageColumn::make('icon')
                     ->label('Ikon Kategori')
                     ->disk('public')
-                    ->height(40)
-                    ->width(40),
             ])
             ->filters([
                 SelectFilter::make('user')

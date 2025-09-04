@@ -42,7 +42,7 @@
                 <a href="#" class="swiper-slide !w-fit">
                     <div class="flex flex-col items-center shrink-0 gap-2 text-center">
                         <div
-                            class="w-[64px] h-[64px] rounded-full flex shrink-0 overflow-hidden p-4 bg-[#9393931A] bg-opacity-10">
+                            class="w-[80px] h-[80px] rounded-full flex shrink-0 overflow-hidden p-4 bg-[#9393931A] bg-opacity-10">
                             @if($category->icon && file_exists(storage_path('app/public/' . $category->icon)))
                                 <img src="{{asset('storage/' . $category->icon)}}" class="w-full h-full object-contain"
                                     alt="Category icon for {{ $category->name }}">

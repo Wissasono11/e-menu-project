@@ -27,9 +27,6 @@ class ProductCategoryForm
                     ->disk('public')
                     ->directory('categories')
                     ->image()
-                    ->imageResizeMode('contain')
-                    ->imageResizeTargetWidth('64')
-                    ->imageResizeTargetHeight('64')
                     ->required(),
             ]);
     }
