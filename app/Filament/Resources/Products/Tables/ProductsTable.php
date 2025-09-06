@@ -32,7 +32,8 @@ class ProductsTable
                 TextColumn::make('name')
                     ->label('Nama Menu'),
                 ImageColumn::make('image')
-                    ->label('Foto Menu'),
+                    ->label('Foto Menu')
+                    ->disk('public'),
                 TextColumn::make('price')
                     ->label('Harga Menu')
                     ->formatStateUsing(fn(string $state) => 'Rp ' . number_format($state)),

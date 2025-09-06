@@ -50,7 +50,9 @@ class ProductForm
                 FileUpload::make('image')
                     ->label('Foto Menu')
                     ->image()
-                    ->required(),
+                    ->required()
+                    ->disk('public')
+                    ->directory('products'),
                 TextInput::make('name')
                     ->label('Nama Menu')
                     ->required(),

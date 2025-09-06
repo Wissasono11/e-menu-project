@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,9 @@ class FrontendController extends Controller
             abort(404);
         }
 
-        return view('pages.index', compact('store'));
+        $populars = Product::where('user_id', $store->id)->where('is_popular', true)->get(); 
+        $products = Product::where('user_id', $store->id)->where('is_popular', false)->get(); 
+
+        return view('pages.index', compact('store', 'populars', 'products'));
     }
 }
