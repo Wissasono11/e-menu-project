@@ -24,4 +24,15 @@ class ProductController extends Controller
 
         return view('pages.product', compact('store', 'product'));
     }
+
+    public function find(Request $request)
+    {
+        $store = User::where('username', $request->username)->first();
+
+        if (!$store) {
+            abort(404);
+        }
+        
+        return view('pages.find', compact('store'));
+    }
 }
