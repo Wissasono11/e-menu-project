@@ -32,7 +32,7 @@
                 Find</p>
         </a>
         <a href="index.html" class="flex flex-col items-center gap-2">
-            <img src="assets/images/icons/Profile.svg" class="w-[24px] h-[24px]" alt="icon">
+            <img src="{{ asset('assets/images/icons/Profile.svg') }}" class="w-[24px] h-[24px]" alt="icon">
             <p class="text-[#606060] font-[400] text-[12px]">Profile</p>
         </a>
     </div>

@@ -8,8 +8,9 @@
 
         <h1 class="text-[#353535] font-[600] text-[24px] mt-6">Discover the unique flavors of food you like!</h1>
 
-        <form action="find-results.html"
+        <form action="{{ route('product.find-results', $store->username) }}" method="GET"
             class="w-full flex flex-col rounded-[8px] border border-[#F1F2F6] p-5 gap-6 bg-white mt-6">
+            @csrf
             <div id="InputContainer" class="flex flex-col gap-[18px]">
                 <div class="flex flex-col w-full gap-2">
                     <p class="font-semibold">Name</p>
