@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class Transaction extends Model
 {
     use SoftDeletes;
-    
+
     protected $fillable = [
         'user_id',
         'code',
@@ -52,7 +52,8 @@ class Transaction extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function transactionDetails() {
+    public function transactionDetails()
+    {
         return $this->hasMany(TransactionDetail::class);
     }
 }

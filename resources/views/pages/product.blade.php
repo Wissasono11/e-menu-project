@@ -57,11 +57,11 @@
                                 <h3 class="text-[#353535] font-[500] text-[14px]">Muhamad Rafli</h3>
 
                                 <div class="flex items-center gap-1">
-                                    <img src="{{asset('assets/images/icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('assets/images/icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('assets/images/icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('assets/images/icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('assets/images/icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
                                 </div>
                             </div>
 
@@ -79,11 +79,11 @@
                                 <h3 class="text-[#353535] font-[500] text-[14px]">Muhamad Rafli</h3>
 
                                 <div class="flex items-center gap-1">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
                                 </div>
                             </div>
 
@@ -100,11 +100,11 @@
                                 <h3 class="text-[#353535] font-[500] text-[14px]">Muhamad Rafli</h3>
 
                                 <div class="flex items-center gap-1">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
                                 </div>
                             </div>
 
@@ -121,11 +121,11 @@
                                 <h3 class="text-[#353535] font-[500] text-[14px]">Muhamad Rafli</h3>
 
                                 <div class="flex items-center gap-1">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
-                                    <img src="{{asset('icons/ic_star.svg')}}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
+                                    <img src="{{ asset('assets/images/icons/ic_star.svg') }}" alt="rating" class="w-4 h-4">
                                 </div>
                             </div>
 
